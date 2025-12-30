@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
-type Status = 'aberta' | 'andamento' | 'aguardando_peca' | 'concluida' | 'cancelada' | 'pendente' | 'pago' | 'recebido' | 'vencido' | 'ativo';
+type Status = 'aberta' | 'andamento' | 'aguardando_peca' | 'concluida' | 'cancelada' | 'cancelado' | 'pendente' | 'pago' | 'recebido' | 'vencido' | 'ativo';
 
 const statusConfig = {
   aberta: { label: 'Aberta', className: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' },
@@ -9,6 +9,7 @@ const statusConfig = {
   aguardando_peca: { label: 'Aguardando Peça', className: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400' },
   concluida: { label: 'Concluída', className: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' },
   cancelada: { label: 'Cancelada', className: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' },
+  cancelado: { label: 'Cancelado', className: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' },
   pendente: { label: 'Pendente', className: 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-400' },
   pago: { label: 'Pago', className: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' },
   recebido: { label: 'Recebido', className: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' },
