@@ -40,17 +40,19 @@ export default function DashboardPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Dashboard</h1>
-          <p className="text-muted-foreground">
-            Bem-vindo à Renomaq Multimarcas! Aqui está um resumo do seu negócio.
+          <h1 className="text-4xl font-bold text-foreground">
+            A solução para <span className="text-accent">gestão empresarial</span> está aqui!
+          </h1>
+          <p className="text-muted-foreground mt-2 text-lg">
+            Equipamentos de alta performance com suporte técnico especializado.
           </p>
         </div>
-        <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-transparent rounded-lg border border-primary/20">
+        <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-xl border-2 border-accent/30 shadow-lg">
           <div className="flex items-center gap-1.5">
-            <span className="text-primary font-bold text-2xl">R</span>
-            <span className="font-bold text-base">enormaq</span>
+            <span className="text-primary font-bold text-3xl">R</span>
+            <span className="font-bold text-xl">enormaq</span>
           </div>
-          <span className="text-xs text-muted-foreground">Multimarcas</span>
+          <span className="text-sm text-muted-foreground font-medium">Multimarcas</span>
         </div>
       </div>
 

@@ -25,23 +25,25 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="space-y-3 text-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sidebar to-foreground p-4">
+      <Card className="w-full max-w-md shadow-2xl border-2 border-accent/20">
+        <CardHeader className="space-y-4 text-center pb-8">
           <div className="flex justify-center">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-3">
               <div className="flex items-center gap-2">
-                <span className="text-primary font-bold text-5xl">R</span>
-                <span className="text-foreground font-bold text-2xl">enormaq</span>
+                <span className="text-primary font-bold text-6xl">R</span>
+                <span className="text-foreground font-bold text-3xl">enormaq</span>
               </div>
-              <span className="text-muted-foreground text-sm font-medium mt-1">Multimarcas</span>
+              <span className="text-muted-foreground text-base font-semibold tracking-wide">Multimarcas</span>
             </div>
           </div>
-          <div>
-            <CardTitle className="text-2xl font-bold">Sistema de Gestão</CardTitle>
-            <CardDescription className="text-base mt-2 flex items-center justify-center gap-1">
+          <div className="mt-4">
+            <CardTitle className="text-3xl font-bold">
+              A solução para <span className="text-accent">gestão</span> está aqui!
+            </CardTitle>
+            <CardDescription className="text-base mt-3 flex items-center justify-center gap-1">
               <Sparkles className="h-4 w-4 text-[hsl(var(--stark))]" />
-              Powered by STARK AI
+              <span className="font-semibold">Powered by STARK AI</span>
             </CardDescription>
           </div>
         </CardHeader>
@@ -97,8 +99,8 @@ export default function LoginPage() {
                 Esqueci minha senha
               </a>
             </div>
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? 'Entrando...' : 'Entrar'}
+            <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 rounded-full shadow-lg" disabled={loading}>
+              {loading ? 'Entrando...' : 'Entrar no Sistema →'}
             </Button>
           </form>
           <div className="mt-6 text-center">
