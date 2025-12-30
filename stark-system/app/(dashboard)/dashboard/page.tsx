@@ -38,11 +38,20 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">
-          Bem-vindo de volta! Aqui está um resumo do seu negócio.
-        </p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <p className="text-muted-foreground">
+            Bem-vindo à Renomaq Multimarcas! Aqui está um resumo do seu negócio.
+          </p>
+        </div>
+        <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-transparent rounded-lg border border-primary/20">
+          <div className="flex items-center gap-1.5">
+            <span className="text-primary font-bold text-2xl">R</span>
+            <span className="font-bold text-base">enormaq</span>
+          </div>
+          <span className="text-xs text-muted-foreground">Multimarcas</span>
+        </div>
       </div>
 
       {/* KPIs */}

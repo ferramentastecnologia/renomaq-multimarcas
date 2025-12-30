@@ -12,7 +12,8 @@ import {
   FileText,
   UserCog,
   BarChart,
-  Settings
+  Settings,
+  Sparkles
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -26,6 +27,7 @@ const menuItems = [
   { href: '/fiscal', icon: FileText, label: 'Fiscal' },
   { href: '/rh', icon: UserCog, label: 'RH/Pessoas' },
   { href: '/relatorios', icon: BarChart, label: 'Relatórios' },
+  { href: '/stark', icon: Sparkles, label: 'Agente STARK', isStark: true },
   { href: '/configuracoes', icon: Settings, label: 'Configurações' },
 ];
 
@@ -36,11 +38,12 @@ export function Sidebar() {
     <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-[hsl(var(--sidebar))] border-r border-[hsl(var(--sidebar-border))]">
       {/* Logo */}
       <div className="flex h-16 items-center justify-center border-b border-[hsl(var(--sidebar-border))] px-6">
-        <Link href="/dashboard" className="flex items-center space-x-2">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(var(--stark))] to-[hsl(var(--stark-light))]">
-            <span className="text-white font-bold text-sm">S</span>
+        <Link href="/dashboard" className="flex flex-col items-center">
+          <div className="flex items-center gap-2">
+            <span className="text-primary font-bold text-3xl">R</span>
+            <span className="text-[hsl(var(--sidebar-foreground))] font-bold text-lg">enormaq</span>
           </div>
-          <span className="text-[hsl(var(--sidebar-foreground))] font-bold text-xl">STARK</span>
+          <span className="text-[hsl(var(--sidebar-foreground))]/60 text-xs font-medium">Multimarcas</span>
         </Link>
       </div>
 
@@ -49,6 +52,7 @@ export function Sidebar() {
         {menuItems.map((item) => {
           const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
           const Icon = item.icon;
+          const isStarkItem = 'isStark' in item && item.isStark;
 
           return (
             <Link
@@ -56,12 +60,13 @@ export function Sidebar() {
               href={item.href}
               className={cn(
                 'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
-                isActive
-                  ? 'bg-[hsl(var(--sidebar-primary))] text-[hsl(var(--sidebar-primary-foreground))]'
-                  : 'text-[hsl(var(--sidebar-foreground))] hover:bg-[hsl(var(--sidebar-accent))]'
+                isStarkItem && !isActive && 'bg-gradient-to-r from-[hsl(var(--stark))]/20 to-transparent border border-[hsl(var(--stark))]/30',
+                isActive && !isStarkItem && 'bg-[hsl(var(--sidebar-primary))] text-[hsl(var(--sidebar-primary-foreground))]',
+                isActive && isStarkItem && 'bg-gradient-to-r from-[hsl(var(--stark))] to-[hsl(var(--stark-light))] text-white',
+                !isActive && !isStarkItem && 'text-[hsl(var(--sidebar-foreground))] hover:bg-[hsl(var(--sidebar-accent))]'
               )}
             >
-              <Icon className="h-5 w-5 flex-shrink-0" />
+              <Icon className={cn("h-5 w-5 flex-shrink-0", isStarkItem && "text-[hsl(var(--stark))]", isActive && isStarkItem && "text-white")} />
               <span className="flex-1">{item.label}</span>
               {item.badge && (
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[hsl(var(--primary))] text-xs text-white">

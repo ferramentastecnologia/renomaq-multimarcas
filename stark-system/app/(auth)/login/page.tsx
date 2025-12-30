@@ -29,14 +29,19 @@ export default function LoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-3 text-center">
           <div className="flex justify-center">
-            <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[hsl(var(--stark))] to-[hsl(var(--stark-light))]">
-              <Sparkles className="h-8 w-8 text-white" />
+            <div className="flex flex-col items-center">
+              <div className="flex items-center gap-2">
+                <span className="text-primary font-bold text-5xl">R</span>
+                <span className="text-foreground font-bold text-2xl">enormaq</span>
+              </div>
+              <span className="text-muted-foreground text-sm font-medium mt-1">Multimarcas</span>
             </div>
           </div>
           <div>
-            <CardTitle className="text-3xl font-bold">STARK System</CardTitle>
-            <CardDescription className="text-base mt-2">
-              Sistema de Gestão Inteligente
+            <CardTitle className="text-2xl font-bold">Sistema de Gestão</CardTitle>
+            <CardDescription className="text-base mt-2 flex items-center justify-center gap-1">
+              <Sparkles className="h-4 w-4 text-[hsl(var(--stark))]" />
+              Powered by STARK AI
             </CardDescription>
           </div>
         </CardHeader>
