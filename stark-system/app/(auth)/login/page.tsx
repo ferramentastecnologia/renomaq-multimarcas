@@ -26,7 +26,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sidebar to-foreground p-4">
-      <Card className="w-full max-w-md shadow-2xl border-2 border-accent/20">
+      <Card className="w-full max-w-md shadow-2xl border-2 border-primary/20">
         <CardHeader className="space-y-4 text-center pb-8">
           <div className="flex justify-center">
             <div className="flex flex-col items-center gap-3">
@@ -39,7 +39,7 @@ export default function LoginPage() {
           </div>
           <div className="mt-4">
             <CardTitle className="text-3xl font-bold">
-              A solução para <span className="text-accent">gestão</span> está aqui!
+              A solução para <span className="text-primary">gestão</span> está aqui!
             </CardTitle>
             <CardDescription className="text-base mt-3 flex items-center justify-center gap-1">
               <Sparkles className="h-4 w-4 text-[hsl(var(--stark))]" />
@@ -99,9 +99,9 @@ export default function LoginPage() {
                 Esqueci minha senha
               </a>
             </div>
-            <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 rounded-full shadow-lg" disabled={loading}>
+            <button type="submit" className="btn-yellow w-full text-lg py-6" disabled={loading}>
               {loading ? 'Entrando...' : 'Entrar no Sistema →'}
-            </Button>
+            </button>
           </form>
           <div className="mt-6 text-center">
             <p className="text-xs text-muted-foreground">

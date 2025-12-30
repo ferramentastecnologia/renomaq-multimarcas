@@ -113,7 +113,7 @@ export default function StarkPage() {
       <div className="flex items-center justify-between">
         <div>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--stark))] to-[hsl(var(--stark-light))] flex items-center justify-center">
+            <div className="icon-box-purple">
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <div>

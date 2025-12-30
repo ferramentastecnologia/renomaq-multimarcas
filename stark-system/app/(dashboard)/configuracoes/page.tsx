@@ -78,7 +78,7 @@ export default function ConfiguracoesPage() {
               <Separator />
               <div className="flex justify-end gap-2">
                 <Button variant="outline">Cancelar</Button>
-                <Button>Salvar Alterações</Button>
+                <button className="btn-yellow">Salvar Alterações</button>
               </div>
             </CardContent>
           </Card>
@@ -92,10 +92,10 @@ export default function ConfiguracoesPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <Button>
-                  <Users className="mr-2 h-4 w-4" />
+                <button className="btn-yellow flex items-center gap-2">
+                  <Users className="h-4 w-4" />
                   Adicionar Usuário
-                </Button>
+                </button>
                 <p className="text-sm text-muted-foreground">
                   1 usuário ativo
                 </p>
@@ -198,10 +198,10 @@ export default function ConfiguracoesPage() {
                   <p className="text-sm text-muted-foreground">
                     Nenhuma automação configurada ainda.
                   </p>
-                  <Button variant="outline" className="mt-4">
-                    <Sparkles className="mr-2 h-4 w-4" />
+                  <button className="btn-yellow flex items-center gap-2 mt-4">
+                    <Sparkles className="h-4 w-4" />
                     Criar Automação
-                  </Button>
+                  </button>
                 </div>
               </div>
             </CardContent>

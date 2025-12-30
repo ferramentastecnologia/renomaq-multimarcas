@@ -13,10 +13,10 @@ export default function LocacaoPage() {
           <h1 className="text-3xl font-bold">Locação de Equipamentos</h1>
           <p className="text-muted-foreground">Gerencie contratos de locação</p>
         </div>
-        <Button>
-          <Plus className="mr-2 h-4 w-4" />
+        <button className="btn-yellow flex items-center gap-2">
+          <Plus className="h-4 w-4" />
           Novo Contrato
-        </Button>
+        </button>
       </div>
 
       <Tabs defaultValue="contratos" className="space-y-4">
@@ -37,7 +37,7 @@ export default function LocacaoPage() {
                 <p className="text-muted-foreground text-center">
                   Nenhum contrato de locação ativo no momento.
                 </p>
-                <Button className="mt-4">Criar Primeiro Contrato</Button>
+                <button className="btn-yellow mt-4">Criar Primeiro Contrato</button>
               </div>
             </CardContent>
           </Card>

@@ -30,10 +30,10 @@ export function Header() {
       {/* Actions */}
       <div className="flex items-center gap-3">
         {/* CTA Button */}
-        <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6">
-          <Phone className="h-4 w-4 mr-2" />
+        <button className="btn-yellow flex items-center gap-2">
+          <Phone className="h-4 w-4" />
           Fale no WhatsApp
-        </Button>
+        </button>
 
         {/* Notifications */}
         <Button variant="ghost" size="icon" className="relative">
@@ -47,9 +47,9 @@ export function Header() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="flex items-center gap-2">
-              <Avatar className="h-8 w-8 ring-2 ring-accent">
+              <Avatar className="h-8 w-8 ring-2 ring-primary">
                 <AvatarImage src="" alt="User" />
-                <AvatarFallback className="bg-primary text-white font-bold">JS</AvatarFallback>
+                <AvatarFallback className="bg-accent text-white font-bold">JS</AvatarFallback>
               </Avatar>
               <span className="text-sm font-semibold">João Silva</span>
             </Button>

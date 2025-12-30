@@ -26,8 +26,8 @@ const faturamentoData = [
 ];
 
 const vendasCategoria = [
-  { name: 'Lavadoras', value: 45, fill: 'hsl(var(--primary))' },
-  { name: 'Aspiradores', value: 30, fill: 'hsl(var(--secondary))' },
+  { name: 'Lavadoras', value: 45, fill: 'hsl(var(--chart-1))' },
+  { name: 'Aspiradores', value: 30, fill: 'hsl(var(--chart-2))' },
   { name: 'Peças', value: 25, fill: 'hsl(var(--chart-3))' },
 ];
 
@@ -41,15 +41,15 @@ export default function DashboardPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-4xl font-bold text-foreground">
-            A solução para <span className="text-accent">gestão empresarial</span> está aqui!
+            A solução para <span className="text-primary">gestão empresarial</span> está aqui!
           </h1>
           <p className="text-muted-foreground mt-2 text-lg">
             Equipamentos de alta performance com suporte técnico especializado.
           </p>
         </div>
-        <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-xl border-2 border-accent/30 shadow-lg">
+        <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-xl border-2 border-primary/30 shadow-lg">
           <div className="flex items-center gap-1.5">
-            <span className="text-primary font-bold text-3xl">R</span>
+            <span className="text-accent font-bold text-3xl">R</span>
             <span className="font-bold text-xl">enormaq</span>
           </div>
           <span className="text-sm text-muted-foreground font-medium">Multimarcas</span>
@@ -212,15 +212,17 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-amber-200 bg-amber-50 dark:bg-amber-950/20">
+          <Card className="border-[hsl(var(--purple-stark))]/30 bg-gradient-to-br from-[hsl(var(--purple-stark))]/10 to-transparent">
             <CardHeader>
               <CardTitle className="text-sm flex items-center gap-2">
-                <TrendingUp className="h-4 w-4" />
+                <div className="icon-box-purple w-8 h-8">
+                  <TrendingUp className="h-4 w-4 text-white" />
+                </div>
                 Insight do STARK
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground font-medium">
                 Seu fluxo de caixa está positivo! Considere investir R$ 5.000 em estoque de peças para o próximo mês.
               </p>
             </CardContent>

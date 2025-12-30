@@ -13,10 +13,10 @@ export default function FiscalPage() {
           <h1 className="text-3xl font-bold">Fiscal</h1>
           <p className="text-muted-foreground">Gerencie notas fiscais e documentos</p>
         </div>
-        <Button>
-          <Plus className="mr-2 h-4 w-4" />
+        <button className="btn-yellow flex items-center gap-2">
+          <Plus className="h-4 w-4" />
           Emitir Nota
-        </Button>
+        </button>
       </div>
 
       <Tabs defaultValue="emitidas" className="space-y-4">

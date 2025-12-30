@@ -55,10 +55,10 @@ export default function OrdemServicoPage() {
         </div>
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
           <DialogTrigger asChild>
-            <Button>
-              <Plus className="mr-2 h-4 w-4" />
+            <button className="btn-yellow flex items-center gap-2">
+              <Plus className="h-4 w-4" />
               Nova OS
-            </Button>
+            </button>
           </DialogTrigger>
           <DialogContent className="max-w-2xl">
             <DialogHeader>
@@ -136,7 +136,9 @@ export default function OrdemServicoPage() {
               <Button variant="outline" onClick={() => setOpenDialog(false)}>
                 Cancelar
               </Button>
-              <Button onClick={() => setOpenDialog(false)}>Criar OS</Button>
+              <button className="btn-yellow" onClick={() => setOpenDialog(false)}>
+                Criar OS
+              </button>
             </DialogFooter>
           </DialogContent>
         </Dialog>

@@ -28,10 +28,10 @@ export default function ClientesPage() {
             Gerencie sua base de clientes
           </p>
         </div>
-        <Button>
-          <Plus className="mr-2 h-4 w-4" />
+        <button className="btn-yellow flex items-center gap-2">
+          <Plus className="h-4 w-4" />
           Novo Cliente
-        </Button>
+        </button>
       </div>
 
       <Card>

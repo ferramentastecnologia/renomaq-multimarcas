@@ -13,10 +13,10 @@ export default function RHPage() {
           <h1 className="text-3xl font-bold">RH / Pessoas</h1>
           <p className="text-muted-foreground">Gerencie colaboradores e recursos humanos</p>
         </div>
-        <Button>
-          <Plus className="mr-2 h-4 w-4" />
+        <button className="btn-yellow flex items-center gap-2">
+          <Plus className="h-4 w-4" />
           Novo Colaborador
-        </Button>
+        </button>
       </div>
 
       <Tabs defaultValue="colaboradores" className="space-y-4">
@@ -38,7 +38,7 @@ export default function RHPage() {
                 <p className="text-muted-foreground text-center">
                   Nenhum colaborador cadastrado ainda.
                 </p>
-                <Button className="mt-4">Cadastrar Primeiro Colaborador</Button>
+                <button className="btn-yellow mt-4">Cadastrar Primeiro Colaborador</button>
               </div>
             </CardContent>
           </Card>

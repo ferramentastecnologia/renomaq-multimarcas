@@ -59,17 +59,17 @@ export function Sidebar() {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
-                isStarkItem && !isActive && 'bg-gradient-to-r from-[hsl(var(--stark))]/20 to-transparent border border-[hsl(var(--stark))]/30',
-                isActive && !isStarkItem && 'bg-[hsl(var(--sidebar-primary))] text-[hsl(var(--sidebar-primary-foreground))]',
-                isActive && isStarkItem && 'bg-gradient-to-r from-[hsl(var(--stark))] to-[hsl(var(--stark-light))] text-white',
-                !isActive && !isStarkItem && 'text-[hsl(var(--sidebar-foreground))] hover:bg-[hsl(var(--sidebar-accent))]'
+                'flex items-center gap-3 px-3 py-2.5 text-sm transition-all duration-200',
+                isStarkItem && !isActive && 'rounded-lg bg-gradient-to-r from-[hsl(var(--purple-stark))]/20 to-transparent border border-[hsl(var(--purple-stark))]/30',
+                isActive && !isStarkItem && 'sidebar-item-active',
+                isActive && isStarkItem && 'rounded-lg bg-gradient-to-r from-[hsl(var(--purple-stark))] to-[hsl(239_84%_75%)] text-white font-semibold',
+                !isActive && !isStarkItem && 'rounded-lg text-[hsl(var(--sidebar-foreground))] hover:bg-[hsl(var(--sidebar-accent))]'
               )}
             >
-              <Icon className={cn("h-5 w-5 flex-shrink-0", isStarkItem && "text-[hsl(var(--stark))]", isActive && isStarkItem && "text-white")} />
+              <Icon className={cn("h-5 w-5 flex-shrink-0", isStarkItem && !isActive && "text-[hsl(var(--purple-stark))]", isActive && isStarkItem && "text-white")} />
               <span className="flex-1">{item.label}</span>
               {item.badge && (
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[hsl(var(--primary))] text-xs text-white">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
                   {item.badge}
                 </span>
               )}

@@ -16,10 +16,10 @@ export default function ProdutosPage() {
           <h1 className="text-3xl font-bold">Produtos/Estoque</h1>
           <p className="text-muted-foreground">Gerencie produtos e controle de estoque</p>
         </div>
-        <Button>
-          <Plus className="mr-2 h-4 w-4" />
+        <button className="btn-yellow flex items-center gap-2">
+          <Plus className="h-4 w-4" />
           Novo Produto
-        </Button>
+        </button>
       </div>
 
       <Card>
